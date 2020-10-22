@@ -94,14 +94,84 @@
                     <img class="img-fluid" src="img/logo.png" alt="Logo Confusion">
                 </div>
                 <div class="col-sm-3 align-self-center text-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning"
-                    data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                    data-placement="bottom" href="#reserveform">Reserve Table</a>
+                    <a data-toggle="modal" data-target="#reserveModal" role="button" class="btn btn-block nav-link btn-warning"
+                     href="#reserveform">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
+    <!--Modal de Reserve Table-->
+    <div class="modal fade" id="reserveModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Reserve a Table</h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body ">
+                    <form action="">
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-2 col-form-label" for="seis">Number of Guests</label>
+                            <div class="col-12 col-sm-10">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="uno" id="uno">
+                                    <label class="form-check-label" for="uno">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="dos" id="dos">
+                                    <label class="form-check-label" for="dos">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tres" id="tres">
+                                    <label class="form-check-label" for="tres">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cuatro" id="cuatro">
+                                    <label class="form-check-label" for="cuatro">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="cinco" id="cinco">
+                                    <label class="form-check-label" for="cinco">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="seis" id="seis">
+                                    <label class="form-check-label" for="seis">6</label>
+                                </div>
 
+                            </div>
+                            
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="smoking">Section</label>
+                            <div  class="btn-group col-sm-4 col-12" role="group" aria-label="SectionResturant">
+                                <button type="button" class="btn btn-success">Non-Smoking</button>
+                                <button id="smoking" name="smoking" type="button" class="btn btn-danger">Smoking</button>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label " for="timeT">Date and Time</label>
+                            <div class="col-sm-4 col-12">
+                                <input class="form-control" type="text" name="date" id="date" placeholder="Date">
+                            </div>
+                            <div class="col-sm-4 col-12">                            
+                                <input class="form-control" type="text" name="timeT" id="timeT" placeholder="Time">
+                            </div>                           
+                        </div>
+                        <div class="form-group row">
+                            
+                            <div class="col-sm-auto offset-sm-2 pr-1">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            </div>  
+                            <div class="col-sm-auto pl-0">
+                                <button class="btn btn-primary">Reserve</button>
+                            </div>                              
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class= "container">
         <!--Creando el carrusel-->
         <div class="row row-content">
@@ -156,7 +226,7 @@
                             <span class="carousel-control-prev-icon"></span>
                         </a>
                         <a class="carousel-control-next" role="button" data-slide="next" href="#mycarousel">
-                            <span class="carousel-control-next-icon btn-primary"></span>
+                            <span class="carousel-control-next-icon"></span>
                         </a>
 
                     </div>
@@ -337,11 +407,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+    
 
 </body>
 
