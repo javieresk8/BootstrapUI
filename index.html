@@ -230,6 +230,16 @@
                         </a>
 
                     </div>
+
+                    <!--Agregando botones play pause para el carousel-->
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                     
                 </div>
             </div>
@@ -303,63 +313,7 @@
             </div>
             
         </div>
-        <div id="reservation" class="row row-content justify-content-center">
-            <div class="col-12 col-sm-8">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form action="">
-                            <div class="form-group row">
-                                <label class="col-12 col-sm-2 col-form-label" for="seis">Number of Guests</label>
-                                <div class="col-12 col-sm-10">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="uno" id="uno">
-                                        <label class="form-check-label" for="uno">1</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="dos" id="dos">
-                                        <label class="form-check-label" for="dos">2</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="tres" id="tres">
-                                        <label class="form-check-label" for="tres">3</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="cuatro" id="cuatro">
-                                        <label class="form-check-label" for="cuatro">4</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="cinco" id="cinco">
-                                        <label class="form-check-label" for="cinco">5</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="seis" id="seis">
-                                        <label class="form-check-label" for="seis">6</label>
-                                    </div>
-
-                                </div>
-                                
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label " for="timeT">Date and Time</label>
-                                <div class="col-sm-4 col-12">
-                                    <input class="form-control" type="text" name="date" id="date" placeholder="Date">
-                                </div>
-                                <div class="col-sm-4 col-12">                            
-                                    <input class="form-control" type="text" name="timeT" id="timeT" placeholder="Time">
-                                </div>                           
-                            </div>
-                            <div class="form-group row">
-                                <div class=" col-sm-12 offset-sm-2">
-                                    <button class="btn btn-primary">Reserve</button>
-                                </div>                              
-                            </div>                        
-                        </form>
-    
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 
     <footer class="footer">
@@ -407,7 +361,18 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 1000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
+    </script>
+
 
 </body>
 
